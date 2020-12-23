@@ -10,7 +10,7 @@ on:
   watch:
     types: [started]
   repository_dispatch:
-    types: pet
+    types: smallhome
 jobs:
   build:
 
