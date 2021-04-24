@@ -10,7 +10,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: 818
+    types: cash
 jobs:
   build:
 
@@ -39,4 +39,3 @@ jobs:
           DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
           DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
           IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY }}
-          JD_818_SHAREID_NOTIFY: ${{ secrets.JD_818_SHAREID_NOTIFY }}
