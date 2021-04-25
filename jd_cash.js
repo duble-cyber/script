@@ -19,6 +19,9 @@ cron "2 0-23/4 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/maste
 ============小火箭=========
 签到领现金 = type=cron,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_cash.js, cronexpr="2 0-23/4 * * *", timeout=3600, enable=true
  */
+if ($.isNode()) {
+  console.log('查询到您设置的2');
+}
 const $ = new Env('签到领现金');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
