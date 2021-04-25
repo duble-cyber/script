@@ -33,12 +33,13 @@ let helpAuthor = true;
 const randomCount = $.isNode() ? 20 : 5;
 const inviteCodes = []
 if ($.isNode()) {
-  console.log('查询到您设置的1');
+ 
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
   })
   if (process.env.JD_DEBUG && process.env.JD_DEBUG === 'false') console.log = () => {};
 } else {
+   console.log('查询到您设置的1');
   cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
